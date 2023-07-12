@@ -120,7 +120,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Create a data model.]**
 - [ ] **[Add validations and Model specs]**
 - [ ] **[Add forms]**
 
