@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 gem 'rubocop', '>= 1.0', '< 2.0'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
