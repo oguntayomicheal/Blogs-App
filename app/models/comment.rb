@@ -6,7 +6,9 @@ class Comment < ApplicationRecord
 
   private
 
+  attribute :comments_counter, :integer, default: 0
+
   def update_comments_counter
-    post.update(comments_counter: author.comments_counter.to_i + 1)
+    post.update(comments_counter: post.comments_counter.to_i + 1)
   end
 end
