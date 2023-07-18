@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
-  describe 'GET /index' do
+  describe 'GET /users#index' do
     it 'returns a success response' do
       get '/users/'
       expect(response).to be_successful
@@ -18,7 +18,7 @@ RSpec.describe UsersController, type: :request do
     end
   end
 
-  describe 'GET /users/show' do
+  describe 'GET /users#show' do
     it 'returns a success response' do
       get '/users/45'
       expect(response).to be_successful
