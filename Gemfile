@@ -73,3 +73,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'dotenv-rails', groups: %i[development test]
+gem 'rails-controller-testing'
