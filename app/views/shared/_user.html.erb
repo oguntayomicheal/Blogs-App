@@ -1,0 +1,15 @@
+<div class="each_user">
+    <div class="user_img">
+        <%= image_tag user.photo%>
+    </div>
+    <div class="user_details">
+        <h1 class="user_name"> 
+            <%= link_to user.name%>
+        </h1>
+        <div class="posts_count">
+            <h3 class="post_num">
+                Number of posts: <%= user.posts_counter%>
+            </h3>
+        </div>
+    </div>
+</div>
