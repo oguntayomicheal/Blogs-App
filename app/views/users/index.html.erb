@@ -1,1 +1,7 @@
 <h2>Here is a list of all users</h2>
+<section id="all_users">
+    <% @all_users.each do |each_user| %>
+        <%= render "shared/user", user: each_user%>
+        <br>
+    <% end %>
+</section>
