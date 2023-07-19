@@ -1,1 +1,31 @@
 <h2>Here are the details of a particular user</h2>
+<section id="each_user_details_post">
+    <%= render "shared/user", user: @user%>
+    <br>
+    <div id="bio">
+        <h2> Bio </h2>
+        <p class="bio_text">
+            <%= @user.bio%>
+        </p>
+    </div>
+    <div class="post_div">
+        <% @recent_posts.each_with_index do |post, index| %>
+            <div class="each_post">
+                <h3>Post #<%= index+1%></h3>
+                <p class="post_text">
+                    <%= post.text%>
+                    <p class="comments_likes_count">
+                        Comments: <%= post.comments_counter %>,
+                        Likes: <%= post.likes_counter %>
+                    </p>
+                </p>
+            </div>
+        <% end %>
+        <br>
+        <button class="see_all_posts">
+            <%= link_to "See all posts", user_posts_path(@user) %>
+        </button>
+
+    </div>
+
+</section>

@@ -4,7 +4,7 @@
     </div>
     <div class="user_details">
         <h1 class="user_name"> 
-            <%= link_to user.name%>
+            <%= link_to user.name, user_path(user.id)%>
         </h1>
         <div class="posts_count">
             <h3 class="post_num">
