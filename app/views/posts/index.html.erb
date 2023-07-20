@@ -14,7 +14,7 @@
                         Likes: <%= post.likes_counter || 0%>
                     </p>
                     <%= link_to "view post", user_post_path(@user, post) %> <br>
-                    <div>
+                    <div class="add_cmt_like">
                         <%= link_to "Add new comment", new_user_post_comment_path(@user, post)%>
                         <%= link_to "Add new like", new_user_post_like_path(@user, post)%>
                     </div>
@@ -36,9 +36,9 @@
 
         <%end%>
 
-        <div>
+        <button>
             <%= link_to "Add new post", new_user_post_path(@user)%>
-        </div>
+        </button>
 
     </div>
 

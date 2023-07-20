@@ -75,3 +75,36 @@ button {
   display: flex;
   justify-content: space-between;
 }
+
+.add_cmt_like {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form_msg {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form_title {
+  height: 30px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: flex;
+}
