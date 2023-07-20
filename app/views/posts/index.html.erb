@@ -4,7 +4,7 @@
     <br>
 
     <div class="all_post">
-        <% @user_posts.each do |post|%>
+        <% @user.posts.each do |post|%>
             <div class="each_post">
                 <div class="post_details">
                     <h3><%= post.title%></h3>
@@ -18,11 +18,9 @@
 
                 <div class="post_comments">
                     <h4>Comments</h4>
-                    <% @post_comments.each do |comment| %>
+                    <% post.five_recent_comments.each do |comment| %>
                         <ul>
-                            <% if comment.post_id === post.id %>
-                                <li><%= comment.author.name%>: <%= comment.text %></li>
-                            <% end %>
+                            <li><%= comment.author.name%>: <%= comment.text %></li>
                         </ul>
 
                     <% end %>
