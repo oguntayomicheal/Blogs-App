@@ -15,8 +15,8 @@
                 <p class="post_text">
                     <%= post.text%>
                     <p class="comments_likes_count">
-                        Comments: <%= post.comments_counter %>,
-                        Likes: <%= post.likes_counter %>
+                        Comments: <%= post.comments_counter || 0 %>,
+                        Likes: <%= post.likes_counter || 0 %>
                     </p>
                 </p>
             </div>

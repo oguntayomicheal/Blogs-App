@@ -4,14 +4,14 @@
     <br>
 
     <div class="all_post">
-        <%= @user_posts.each do |post|%>
+        <% @user_posts.each do |post|%>
             <div class="each_post">
                 <div class="post_details">
                     <h3><%= post.title%></h3>
                     <p class="post_text"><%= post.text %></p>
-                    <p class="commentsCount">
-                        Comments: <%= post.comments_counter %>,
-                        Likes: <%= post.likes_counter %>
+                    <p class="comments_likes_count">
+                        Comments: <%= post.comments_counter || 0%>,
+                        Likes: <%= post.likes_counter || 0%>
                     </p>
                     <%= link_to "view post", user_post_path(@user, post) %>
                 </div>
