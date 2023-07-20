@@ -1,13 +1,13 @@
-<%= form_with model: @post, url: user_post_path, local:true, class: "form" do |f|%>
+<%= form_with model: @post, url: user_posts_path, local: true, class: "form" do |f|%>
     <h3>Add new post</h3>
     <div>
         <%= f.label :title%><br>
-        <%= f.text_field :title, required: true, class: "form_title"%>
+        <%= f.text_field :title, required: true, placeholder: "Title", class: "form_title"%>
     </div><br>
 
     <div>
         <%= f.label :text%><br>
-        <%= f.text_area :text, required: true, class: "form_msg"%>
+        <%= f.text_area :text, required: true, placeholder: "Text", class: "form_msg"%>
     </div><br>
 
     <div>
