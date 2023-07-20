@@ -23,7 +23,6 @@ class PostsController < ApplicationController
       flash[:alert] = "Couldn't create post!"
       render :new, status: :unprocessable_entity
     end
-
   end
 
   private
