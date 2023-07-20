@@ -7,4 +7,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post_comments = Comment.where(post_id: @post)
   end
+
+  def new
+    @post = Post.new
+  end
 end
