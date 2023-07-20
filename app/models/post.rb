@@ -5,6 +5,9 @@ class Post < ApplicationRecord
 
   after_save :update_posts_counter
 
+  attribute :comments_counter, :integer, default: 0
+  attribute :posts_counter, :integer, default: 0
+  
   def update_posts_counter
     author.update(posts_counter: author.posts_counter.to_i + 1)
   end
