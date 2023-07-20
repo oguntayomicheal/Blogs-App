@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   attribute :comments_counter, :integer, default: 0
+  attribute :likes_counter, :integer, default: 0
   attribute :posts_counter, :integer, default: 0
   
   def update_posts_counter
