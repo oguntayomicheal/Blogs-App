@@ -1,1 +1,29 @@
 <h2>Here is a particular post by a specific user</h2>
+<section id="each_post_comments">
+    <div class="each_post">
+        <div class="post_header">
+            <h2>
+                <%= @post.title %> by <%= @post.author.name%>
+            </h2>
+            <h4>
+                Comments: <%= @post.comments_counter || 0%>,
+                Likes: <%= @post.likes_counter || 0%>
+            </h4>
+        </div>
+        <p class="post_text">
+            <%= @post.text%>
+        </p>
+    </div>
+
+    <div class="post_comments">
+        <h3>Comments:</h3>
+        <ul>
+            <% @post_comments.each do |comment| %>
+                <li>
+                    <%= comment.author.name %>: <%= comment.text %>
+                </li>
+            <% end %>
+        </ul>
+
+    </div>
+</section>
