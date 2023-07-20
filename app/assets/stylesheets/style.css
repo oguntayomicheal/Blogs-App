@@ -42,7 +42,8 @@ h3 {
 }
 
 #each_user_details_3post,
-.post_div, .all_post {
+.post_div,
+.all_post {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -53,7 +54,7 @@ h3 {
   padding: 0% 3%;
 }
 
-.each_post{
+.each_post {
   border: 2px solid #000;
   padding: 0% 3%;
 }
@@ -63,7 +64,7 @@ button {
   margin: auto;
   height: 30px;
 }
-  
+
 .comments_likes_count {
   display: flex;
   justify-content: flex-end;
