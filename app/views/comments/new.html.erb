@@ -1,0 +1,12 @@
+<%= form_with model: @comment, url: user_post_comments_path, local: true, class: "form" do |f|%>
+    <h3>Add new comment</h3>
+    <div>
+        <%= f.label :text%><br>
+        <%= f.text_area :text, required: true, placeholder: "comment", class: "form_msg"%>
+    </div><br>
+
+    <div>
+        <%= f.submit "Add comment", class: "btn" %>
+    </div>
+<% end %>
+<p><%= link_to 'Back to post', user_posts_path%></p>
