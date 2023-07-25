@@ -19,9 +19,9 @@ RSpec.describe 'User index Page', type: :feature do
   end
 
   it 'displays users information' do
-    visit users_path
-
+    visit users_path(user1)
     expect(page).to have_content(user1.name)
+    visit users_path(user2)
     expect(page).to have_content(user2.name)
     expect(page).to have_css('img')
 
