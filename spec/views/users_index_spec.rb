@@ -1,24 +1,9 @@
 require 'rails_helper'
 RSpec.describe 'User index Page', type: :feature do
-  let(:user1) do
-    User.create(
-      name: 'Tom',
-      photo: 'jane.jpg',
-      bio: 'sam is a 21 year old footballer from Ghana',
-      posts_counter: 2
-    )
-  end
+  scenario 'displays users information' do
+    user1 = User.create(name: 'John Doe', photo: 'john.jpg', bio: 'John Doe from Ghana', posts_counter: 5)
+    user2 = User.create(name: 'Jane Smith', photo: 'jane.jpg', bio: 'John Doe from Ghana', posts_counter: 10)
 
-  let(:user2) do
-    User.create(
-      name: 'John Doe',
-      photo: 'john.jpg',
-      bio: 'john is a 21 year old footballer from Ghana',
-      posts_counter: 5
-    )
-  end
-
-  it 'displays users information' do
     visit users_path(user1)
     expect(page).to have_content(user1.name)
     visit users_path(user2)
