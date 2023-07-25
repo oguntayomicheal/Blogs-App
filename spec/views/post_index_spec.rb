@@ -29,7 +29,7 @@ RSpec.describe 'Posts index Page', type: :feature do
     expect(page).to have_content("Likes: #{post1.likes_counter}")
     expect(page).to have_content("Likes: #{post2.likes_counter}")
     expect(page).to have_content("Likes: #{post3.likes_counter}")
-    
+
     # When I click on a post, it redirects me to that post's show page.
     click_link post1.title
     expect(current_path).to eq(user_post_path(user, post1))
