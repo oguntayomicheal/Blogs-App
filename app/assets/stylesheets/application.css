@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+div.field {
+  width: 60%;
+}
+
+div.field > input {
+  margin: 10px 0;
+  width: 100%;
+}
